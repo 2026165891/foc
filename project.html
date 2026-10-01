@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoC</title>
+	<link rel="icon" type="image/x-icon" href="pgicon.png">
+    <style>
+	
+        html, body { 
+		box-sizing: border-box; 
+		margin: 0;		
+		height: 100%
+		padding: 0; 
+		}
+		
+        body { 
+		font-family: Arial, sans-serif; 
+		line-height: 1.6; 
+		color: #502A50; 
+		display: flex; 
+		flex-direction: column; 
+		min-height: 100vh; 
+		}
+        
+        /* Layout Structure */
+        header { 
+		background: #7E2A53; 
+		color: #ffffff; 
+		padding: 20px; 
+		text-align: center; 
+		}
+		
+		
+        nav { 
+		background: #502A50; 
+		padding: 10px; 
+		text-align: center; 
+		margin-bottom: 50px;
+		}
+		
+        nav a { 
+		color: white; 
+		text-decoration: none; 
+		margin: 0 15px; 
+		font-weight: bold; 
+		}
+        
+		.centered-content {
+		text-align: center;
+		max-width: 800px;
+		margin: 0 auto;
+		}
+		
+		.navbar {
+		background-color: #502A50;
+		padding: 15px;
+		display: flex;
+		justify-content: center;
+		gap: 15px;
+		margin-bottom: 60px
+		}
+		
+		.nav-button {
+		display: inline-block;
+		color: #BA71A2;
+		text-decoration: none;
+		font-family: Arial, sans-serif;
+		font-weight: bold;
+		font-size: 16px;
+		padding: 10px 20px;
+		border-radius: 5px;
+		transition: background-color 0.3s ease, transform 0.1s ease;
+		}
+		
+		.nav-button:hover {
+		background-color: #BA71A2;
+		color: #ECD0EC
+		}
+		
+		.nav-button:active {
+		transform: scale(0.95);
+		}
+		
+		/* Container to anchor the buttons to the left side of the viewport */
+        .left-sidebar-buttons {
+            position: fixed; 
+            left: 0;         
+            top: 50%;        
+            transform: translateY(-50%); 
+            display: flex;
+            flex-direction: column; 
+            gap: 20px;       
+            z-index: 1000;
+        }
+
+        /* Styling for the buttons */
+        .left-sidebar-buttons a {
+            text-decoration: none;
+            color: white;
+            background-color: #502A50;
+            padding: 24px 40px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 0 5px 5px 0; /* Rounds only the right corners */
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Hover effect */
+        .left-sidebar-buttons a:hover {
+            background-color: #BA71A2;
+            transform: translateX(5px);   /* Subtle nudge forward on hover */
+        }
+		
+        footer { 
+		background: #461D3A; 
+		color: white; 
+		text-align: center; 
+		padding: 15px; 
+		margin-top: 100px;
+		}
+		
+		
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Fundamentals of Computing</h1>
+    </header>
+
+    <nav class="navbar">
+        <a href="home.html"class="nav-button">Home</a>
+		<a href="index.html" class="nav-button">Course</a>
+        <a href="project.html"class="nav-button">Project</a>
+		<a href="concepts.html"class="nav-button">Concepts</a>
+        <a href="databases.html"class="nav-button">Databases</a>
+        <a href="documentation.html"class="nav-button">Documentation</a>
+		<a href="aboutme.html"class="nav-button">About Me</a>
+		<a href="home.html"class="nav-button">Dev Team</a>
+    </nav>
+
+    <div class="centered-content">
+	<div style="display: flex; justify-content: center; margin-top: 10px; ">
+    <img src="proj.jpe" alt="Project Banner" class="banner-img">
+
+	</div>
+        <main class="content">
+            <h1 style="margin-top: 40px;"><b>PROJECTS</b></h1>
+            <p><i> This final projects consists of 4 sections. During the class, we all went through different projects as follows: </i></p>
+</head>
+<body>
+
+    <!-- Left Side Buttons Container -->
+    <div class="left-sidebar-buttons">
+        <a href="gates.html"class="nav-button">Gates</a>
+		<a href="hexcal.html" class="nav-button">Calculator</a>
+    </div>
+</body>
+</html>
+
+		
+		</main>
+    </div>
+
+    <footer>
+        <p>&copy; Powered by UB</p>
+    </footer>
+
+</body>
+</html>

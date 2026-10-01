@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoC</title>
+	<link rel="icon" type="image/x-icon" href="pgicon.png">
+    <style>
+	
+        html, body { 
+		box-sizing: border-box; 
+		margin: 0;		
+		height: 100%
+		padding: 0; 
+		}
+		
+        body { 
+		font-family: Arial, sans-serif; 
+		line-height: 1.6; 
+		color: #502A50; 
+		display: flex; 
+		flex-direction: column; 
+		min-height: 100vh; 
+		}
+        
+        /* Layout Structure */
+        header { 
+		background: #7E2A53; 
+		color: #ffffff; 
+		padding: 20px; 
+		text-align: center; 
+		}
+		
+		
+        nav { 
+		background: #502A50; 
+		padding: 10px; 
+		text-align: center; 
+		margin-bottom: 50px;
+		}
+		
+        nav a { 
+		color: white; 
+		text-decoration: none; 
+		margin: 0 15px; 
+		font-weight: bold; 
+		}
+        
+		.centered-content {
+		text-align: center;
+		max-width: 800px;
+		margin: 0 auto;
+		}
+		
+		.navbar {
+		background-color: #502A50;
+		padding: 15px;
+		display: flex;
+		justify-content: center;
+		gap: 15px;
+		margin-bottom: 60px
+		}
+		
+		.nav-button {
+		display: inline-block;
+		color: #BA71A2;
+		text-decoration: none;
+		font-family: Arial, sans-serif;
+		font-weight: bold;
+		font-size: 16px;
+		padding: 10px 20px;
+		border-radius: 5px;
+		transition: background-color 0.3s ease, transform 0.1s ease;
+		}
+		
+		.nav-button:hover {
+		background-color: #BA71A2;
+		color: #ECD0EC
+		}
+		
+		.nav-button:active {
+		transform: scale(0.95);
+		}
+		
+		.container {
+            display: flex;
+            background-color: #72c3eb; /* Matches the main blue background */
+            padding: 15px;
+            font-family: serif;
+            font-size: 18px;
+        }
+
+        .input-group {
+            flex: 1;
+        }
+
+        .button-container {
+            margin-top: 5px;
+        }
+
+        button {
+            background-color: #BA71A2;
+            border: 1px solid #7a7a7a;
+            border-bottom: 2px solid #4a4a4a;
+            border-right: 2px solid #4a4a4a;
+            padding: 1px 4px;
+            font-size: 11px;
+            cursor: pointer;
+            font-family: sans-serif;
+            margin-right: 2px;
+        }
+		
+
+        button:active {
+            border: 1px solid #4a4a4a;
+            border-top: 2px solid #7a7a7a;
+            border-left: 2px solid #7a7a7a;
+        }
+		
+		        
+        footer { 
+		background: #461D3A; 
+		color: white; 
+		text-align: center; 
+		padding: 15px; 
+		margin-top: 100px;
+		}
+		
+		
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Fundamentals of Computing</h1>
+    </header>
+
+    <nav class="navbar">
+        <a href="home.html"class="nav-button">Home</a>
+		<a href="index.html" class="nav-button">Course</a>
+        <a href="project.html"class="nav-button">Project</a>
+		<a href="concepts.html"class="nav-button">Concepts</a>
+        <a href="databases.html"class="nav-button">Databases</a>
+        <a href="documentation.html"class="nav-button">Documentation</a>
+		<a href="aboutme.html"class="nav-button">About Me</a>
+		<a href="home.html"class="nav-button">Dev Team</a>
+    </nav>
+
+    <div class="centered-content">
+        <main>
+            <h1 style="margin-top: 60px;">Flip-Flop Circuit</h1>
+            <p><i>About flip-flops.</i></p>
+
+
+<body>
+
+<script>
+function flip(sw) {
+  var pic;
+  if (sw == 0) {
+    pic = "input_2.png"
+  } else {
+    pic = "input_1.png"
+  }
+  document.getElementById('myImage1').src = pic;
+}
+</script>
+
+<img id="myImage1" src="default.png" width="500" height="280">
+
+<p>
+<button style="padding: 12px 24px; font-size: 18px; border-radius: 6px;"type="button" onclick="flip(1)">Input 1</button>
+<button style="padding: 12px 24px; font-size: 18px; margin-bottom: 50px; border-radius: 6px;"type="button" onclick="flip(0)">Input 2</button>
+</p>
+
+
+<h1 style="margin-top: 60px;">NOT GATE</h1>
+            <p><i>About not gates.</i></p>
+
+<script>
+function not(sw) {
+  var pic;
+  if (sw == 0) {
+    pic = "not_off.png";
+  } else {
+    pic = "not_on.png";
+  }
+  document.getElementById('myImage2').src = pic;
+}
+</script>
+
+<img id="myImage2" src="not_off.png" width="500" height="280">
+
+<p>
+  <button style="padding: 12px 24px; font-size: 18px; border-radius: 6px;" type="button" onclick="not(1)">NOT ON</button>
+  <button style="padding: 12px 24px; font-size: 18px; margin-bottom: 50px; border-radius: 6px;" type="button" onclick="not(0)">NOT OFF</button>
+</p>
+
+
+<h1 style="margin-top: 60px;">AND GATE</h1>
+            <p><i>About and gates.</i></p>
+			
+
+<script>
+function and(sw) {
+  var pic;
+  if (sw == 0) {
+    pic = "and_off.png";
+  } else {
+    pic = "and_on.png";
+  }
+  document.getElementById('myImage3').src = pic;
+}
+</script>
+
+<img id="myImage3" src="default_3.png" width="500" height="280">
+
+<p>
+  <button style="padding: 12px 24px; font-size: 18px; border-radius: 6px;" type="button" onclick="and(1)">AND INPUT 1</button>
+  <button style="padding: 12px 24px; font-size: 18px; margin-bottom: 50px; border-radius: 6px;" type="button" onclick="and(0)">AND INPUT 2</button>
+</p>
+
+
+
+<h1 style="margin-top: 60px;">OR GATE</h1>
+            <p><i>About or gates.</i></p>
+			
+
+<script>
+function or(sw) {
+  var pic;
+  if (sw == 0) {
+    pic = "or_off.png";
+  } else {
+    pic = "or_on.png";
+  }
+  document.getElementById('myImage4').src = pic;
+}
+</script>
+
+<img id="myImage4" src="default_4.png" width="500" height="280">
+
+<p>
+  <button style="padding: 12px 24px; font-size: 18px; border-radius: 6px;" type="button" onclick="or(1)">OR INPUT 1</button>
+  <button style="padding: 12px 24px; font-size: 18px; margin-bottom: 50px; border-radius: 6px;" type="button" onclick="or(0)">OR INPUT 2</button>
+</p>
+
+
+
+
+<h1 style="margin-top: 60px;">XOR GATE</h1>
+            <p><i>About xor gates.</i></p>
+			
+			<img id="myImage" src="default_5.png" style="width:500px" height="280">
+<p>
+<button style="padding: 12px 24px; font-size: 18px; margin-bottom: 50px; border-radius: 6px;" type="button" onclick="document.getElementById('myImage').src='on1.png'">XOR INPUT 1</button>
+<button style="padding: 12px 24px; font-size: 18px; margin-bottom: 50px; border-radius: 6px;" type="button" onclick="document.getElementById('myImage').src='on2.png'">XOR INPUT 2</button>
+</p>
+
+</body>
+</html>
+
+        
+		</main>
+    </div>
+
+    <footer>
+        <p>&copy; Powered by UB</p>
+    </footer>
+
+</body>
+</html>

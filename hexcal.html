@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoC</title>
+	<link rel="icon" type="image/x-icon" href="pgicon.png">
+    <style>
+	
+        html, body { 
+		box-sizing: border-box; 
+		margin: 0;		
+		height: 100%
+		padding: 0; 
+		}
+		
+        body { 
+		font-family: Arial, sans-serif; 
+		line-height: 1.6; 
+		color: #502A50; 
+		display: flex; 
+		flex-direction: column; 
+		min-height: 100vh; 
+		}
+        
+        /* Layout Structure */
+        header { 
+		background: #7E2A53; 
+		color: #ffffff; 
+		padding: 20px; 
+		text-align: center; 
+		}
+		
+		
+        nav { 
+		background: #502A50; 
+		padding: 10px; 
+		text-align: center; 
+		margin-bottom: 50px;
+		}
+		
+        nav a { 
+		color: white; 
+		text-decoration: none; 
+		margin: 0 15px; 
+		font-weight: bold; 
+		}
+        
+		.centered-content {
+		text-align: center;
+		max-width: 800px;
+		margin: 0 auto;
+		}
+		
+		.navbar {
+		background-color: #502A50;
+		padding: 15px;
+		display: flex;
+		justify-content: center;
+		gap: 15px;
+		margin-bottom: 60px
+		}
+		
+		.nav-button {
+		display: inline-block;
+		color: #BA71A2;
+		text-decoration: none;
+		font-family: Arial, sans-serif;
+		font-weight: bold;
+		font-size: 16px;
+		padding: 10px 20px;
+		border-radius: 5px;
+		transition: background-color 0.3s ease, transform 0.1s ease;
+		}
+		
+		.nav-button:hover {
+		background-color: #BA71A2;
+		color: #ECD0EC
+		}
+		
+		.nav-button:active {
+		transform: scale(0.95);
+		}
+		
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f5f6fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .converter-card {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 6px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h2 {
+            color: #4a154b;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 24px;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: #333333;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #dcdde1;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+            text-transform: uppercase;
+        }
+
+        input[type="text"]::placeholder {
+            color: #a0a5a8;
+            text-transform: none;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #0070f3;
+        }
+
+        .convert-btn {
+            width: 100%;
+            background-color: #502A50;
+            color: white;
+            border: none;
+            padding: 14px;
+            font-size: 16px;
+            font-weight: 500;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin-bottom: 20px;
+        }
+
+        .convert-btn:hover {
+            background-color: #BA71A2;
+        }
+
+        .result-box {
+            width: 100%;
+            min-height: 44px;
+            background-color: #eef1f6;
+            border-radius: 4px;
+            padding: 12px;
+            box-sizing: border-box;
+            font-family: monospace;
+            font-size: 15px;
+            color: #333333;
+            word-break: break-all;
+        }
+		
+		        
+        footer { 
+		background: #461D3A; 
+		color: white; 
+		text-align: center; 
+		padding: 15px; 
+		margin-top: 100px;
+		}
+		
+		
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Fundamentals of Computing</h1>
+    </header>
+
+    <nav class="navbar">
+        <a href="home.html"class="nav-button">Home</a>
+		<a href="index.html" class="nav-button">Course</a>
+        <a href="project.html"class="nav-button">Project</a>
+		<a href="concepts.html"class="nav-button">Concepts</a>
+        <a href="databases.html"class="nav-button">Databases</a>
+        <a href="documentation.html"class="nav-button">Documentation</a>
+		<a href="aboutme.html"class="nav-button">About Me</a>
+		<a href="home.html"class="nav-button">Dev Team</a>
+    </nav>
+
+    <div class="centered-content">
+	<div style="display: flex; justify-content: center; margin-top: 10px; ">
+
+	</div>
+        <main class="content">
+            
+			<div class="converter-card">
+        <h2>Hex to Binary</h2>
+        
+        <div class="form-group">
+            <label for="hexInput">Enter Hex Value:</label>
+            <input type="text" id="hexInput" placeholder="E.G. A1, FF, 3C">
+        </div>
+
+        <button class="convert-btn" onclick="convertHexToBinary()">Convert</button>
+
+        <div class="form-group">
+            <label>Binary Result:</label>
+            <div id="binaryResult" class="result-box"></div>
+        </div>
+    </div>
+
+    <script>
+        function convertHexToBinary() {
+            const hexValue = document.getElementById('hexInput').value.trim();
+            const resultBox = document.getElementById('binaryResult');
+            
+            if (hexValue === '') {
+                resultBox.textContent = '';
+                return;
+            }
+
+            // Remove spaces or commas if user types them like the placeholder
+            const cleanHex = hexValue.replace(/[\s,]/g, '');
+
+            // Validate if it is a valid hex string
+            if (!/^[0-9A-Fa-f]+$/.test(cleanHex)) {
+                resultBox.textContent = 'Invalid Hexadecimal Value';
+                resultBox.style.color = '#d63031';
+                return;
+            }
+
+            resultBox.style.color = '#333333';
+            let binaryResult = '';
+            
+            for (let i = 0; i < cleanHex.length; i++) {
+                // Convert each hex character to its 4-digit binary representation
+                let binaryChunk = parseInt(cleanHex[i], 16).toString(2);
+                binaryResult += binaryChunk.padStart(4, '0') + ' ';
+            }
+
+            resultBox.textContent = binaryResult.trim();
+        }
+
+        // Allow pressing Enter to convert
+        document.getElementById('hexInput').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                convertHexToBinary();
+            }
+        });
+    </script>
+			
+		</main>
+    </div>
+
+    <footer>
+        <p>&copy; Powered by UB</p>
+    </footer>
+
+</body>
+</html>
