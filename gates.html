@@ -7,12 +7,13 @@
 	<link rel="icon" type="image/x-icon" href="pgicon.png">
     <style>
 	
-        html, body { 
+        body { 
 		box-sizing: border-box; 
 		margin: 0;		
 		height: 100%
 		padding: 0; 
-		}
+        background-color: #FFDBDA;
+        }
 		
         body { 
 		font-family: Arial, sans-serif; 
@@ -143,13 +144,14 @@
         <a href="databases.html"class="nav-button">Databases</a>
         <a href="documentation.html"class="nav-button">Documentation</a>
 		<a href="aboutme.html"class="nav-button">About Me</a>
-		<a href="home.html"class="nav-button">Dev Team</a>
+		<a href="form.html"class="nav-button">Codes</a>
+
     </nav>
 
     <div class="centered-content">
         <main>
             <h1 style="margin-top: 60px;">Flip-Flop Circuit</h1>
-            <p><i>About flip-flops.</i></p>
+            <p><i>Flip-Flops are two stable states <br> in a circuit that can be used <br> to store state information.</i></p>
 
 
 <body>
@@ -175,7 +177,7 @@ function flip(sw) {
 
 
 <h1 style="margin-top: 60px;">NOT GATE</h1>
-            <p><i>About not gates.</i></p>
+            <p><i>A Web Page demonstrating how a NOT gate works. <br> NOT gates is a circuit that inverts the input <br> as its output, also known as an inverter.</i></p>
 
 <script>
 function not(sw) {
@@ -198,7 +200,7 @@ function not(sw) {
 
 
 <h1 style="margin-top: 60px;">AND GATE</h1>
-            <p><i>About and gates.</i></p>
+            <p><i>A Web Page demonstrating how a AND gate works. <br> AND gates is a basic digital logic gate <br> that implements logical conjunction.</i></p>
 			
 
 <script>
@@ -223,7 +225,7 @@ function and(sw) {
 
 
 <h1 style="margin-top: 60px;">OR GATE</h1>
-            <p><i>About or gates.</i></p>
+            <p><i>A Web Page demonstrating how a OR gate works. <br> OR gates is a basic logical gate that <br> implements logical disjunction.</i></p>
 			
 
 <script>
@@ -249,13 +251,48 @@ function or(sw) {
 
 
 <h1 style="margin-top: 60px;">XOR GATE</h1>
-            <p><i>About xor gates.</i></p>
+            <p><i>A Web Page demonstrating how a XOR gate works. <br> XOR gate implements an exclusive or; it outputs <br> a high value only when its inputs are different from each other.</i></p>
 			
 			<img id="myImage" src="default_5.png" style="width:500px" height="280">
 <p>
 <button style="padding: 12px 24px; font-size: 18px; margin-bottom: 50px; border-radius: 6px;" type="button" onclick="document.getElementById('myImage').src='on1.png'">XOR INPUT 1</button>
 <button style="padding: 12px 24px; font-size: 18px; margin-bottom: 50px; border-radius: 6px;" type="button" onclick="document.getElementById('myImage').src='on2.png'">XOR INPUT 2</button>
 </p>
+
+
+<p> Enter one number: </p>
+
+  <input type="number" id="num1">
+  <button onclick="add()">=</button>
+ 
+<p>The sum of all even numbers of your given number is: </p>
+
+  <h2 id="result"></h2>
+
+	
+	<script>
+function add() {
+
+    let n = parseInt(document.getElementById('num1').value);
+
+    let sum = 0;
+    let current = 1;
+
+   
+    while (current < n) { 
+        if (current % 2 == 0) {
+            sum += current;
+        }
+        current++;
+    }
+
+   
+
+    let resultElement = document.getElementById('result');
+    resultElement.textContent = sum;
+
+}
+</script>
 
 </body>
 </html>
