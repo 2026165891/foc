@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoC</title>
+	<link rel="icon" type="image/x-icon" href="pgicon.png">
+    <style>
+	
+        body { 
+		box-sizing: border-box; 
+		margin: 0;		
+		height: 100%
+		padding: 0; 
+        background-color: #FFDBDA;
+        }
+		
+        body { 
+		font-family: Arial, sans-serif; 
+		line-height: 1.6; 
+		color: #502A50; 
+		display: flex; 
+		flex-direction: column; 
+		min-height: 100vh; 
+		}
+        
+        /* Layout Structure */
+        header { 
+		background: #7E2A53; 
+		color: #ffffff; 
+		padding: 20px; 
+		text-align: center; 
+		}
+		
+		
+        nav { 
+		background: #502A50; 
+		padding: 10px; 
+		text-align: center; 
+		margin-bottom: 50px;
+		}
+		
+        nav a { 
+		color: white; 
+		text-decoration: none; 
+		margin: 0 15px; 
+		font-weight: bold; 
+		}
+        
+		.centered-content {
+		text-align: center;
+		max-width: 800px;
+		margin: 0 auto;
+		}
+		
+		.navbar {
+		background-color: #502A50;
+		padding: 15px;
+		display: flex;
+		justify-content: center;
+		gap: 15px;
+		margin-bottom: 60px
+		}
+		
+		.nav-button {
+		display: inline-block;
+		color: #BA71A2;
+		text-decoration: none;
+		font-family: Arial, sans-serif;
+		font-weight: bold;
+		font-size: 16px;
+		padding: 10px 20px;
+		border-radius: 5px;
+		transition: background-color 0.3s ease, transform 0.1s ease;
+		}
+		
+		.nav-button:hover {
+		background-color: #BA71A2;
+		color: #ECD0EC
+		}
+
+		
+		.nav-button:active {
+		transform: scale(0.95);
+		}
+		     
+        font-family: Arial, sans-serif;
+            background-color: #FFDBDA;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: #D46C8C;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #11151C;
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        .output-section {
+            margin-top: 20px;
+            background: #F8B7E1;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .output-row {
+            margin-bottom: 10px;
+        }
+        .output-row span {
+            font-weight: bold;
+            color: #495057;
+        }
+        .result {
+            font-family: monospace;
+            background: #fff;
+            padding: 5px 8px;
+            border: 1px solid #ced4da;
+            border-radius: 3px;
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
+            word-break: break-all;
+        }
+		
+		        
+        footer { 
+		background: #461D3A; 
+		color: white; 
+		text-align: center; 
+		padding: 15px; 
+		margin-top: 100px;
+		}
+		
+		
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Fundamentals of Computing</h1>
+    </header>
+
+    <nav class="navbar">
+        <a href="home.html"class="nav-button">Home</a>
+		<a href="index.html" class="nav-button">Course</a>
+        <a href="project.html"class="nav-button">Project</a>
+		<a href="concepts.html"class="nav-button">Concepts</a>
+        <a href="databases.html"class="nav-button">Databases</a>
+        <a href="documentation.html"class="nav-button">Documentation</a>
+		<a href="aboutme.html"class="nav-button">About Me</a>
+		<a href="form.html"class="nav-button">Codes</a>
+
+    </nav>
+
+
+	<div class="centered-content">
+	<div style="display: flex; justify-content: center; margin-top: 10px;">
+    <img src="hexidecimal.png" width="1000" height="400" alt="Description">
+
+
+	</div>
+	<div style="display: flex; justify-content: center; margin-top: 10px; "></div>
+        
+		
+		<main class="centered-content">
+		
+            
+           
+<body>
+
+<div class="container">
+    <h1>Encoding Converter</h1>
+    
+    <div class="input-group">
+        <label for="textInput">Enter Text or Hex (Auto-detects):</label>
+        <input type="text" id="textInput" placeholder="Type text (e.g., 'A') or Hex (e.g., '41')" oninput="convertAll()">
+    </div>
+
+    <div class="output-section">
+        <h3>Converted Results</h3>
+        
+        <div class="output-row">
+            <span>Hexadecimal:</span>
+            <div id="hexOut" class="result">-</div>
+        </div>
+        
+        <div class="output-row">
+            <span>Binary (8-bit per character):</span>
+            <div id="binOut" class="result">-</div>
+        </div>
+        
+        <div class="output-row">
+            <span>ASCII Decimal Values:</span>
+            <div id="asciiOut" class="result">-</div>
+        </div>
+        
+        <div class="output-row">
+            <span>Unicode Code (Hex):</span>
+            <div id="unicodeOut" class="result">-</div>
+        </div>
+    </div>
+</div>
+
+<script>
+function convertAll() {
+    let input = document.getElementById('textInput').value.trim();
+    
+    if (!input) {
+        document.getElementById('hexOut').innerText = '-';
+        document.getElementById('binOut').innerText = '-';
+        document.getElementById('asciiOut').innerText = '-';
+        document.getElementById('unicodeOut').innerText = '-';
+        return;
+    }
+
+    let chars = [];
+    
+    // Check if input might be purely hex string (even length, valid hex chars)
+    let isHex = /^[0-9A-Fa-f]+\$/.test(input) && input.length % 2 === 0;
+    
+    if (isHex && input.length >= 2 && !/[g-zG-Z]/.test(input)) {
+        // Parse as hex pairs
+        for (let i = 0; i < input.length; i += 2) {
+            let byteVal = parseInt(input.substr(i, 2), 16);
+            chars.push(String.fromCharCode(byteVal));
+        }
+    } else {
+        // Treat as normal string characters
+        chars = input.split('');
+    }
+
+    let hexArr = [];
+    let binArr = [];
+    let asciiArr = [];
+    let unicodeArr = [];
+
+    chars.forEach(ch => {
+        let code = ch.charCodeAt(0);
+        hexArr.push(code.toString(16).padStart(2, '0').toUpperCase());
+        binArr.push(code.toString(2).padStart(8, '0'));
+        asciiArr.push(code <= 127 ? code : `${code} (non-ASCII)`);
+        unicodeArr.push('U+' + code.toString(16).padStart(4, '0').toUpperCase());
+    });
+
+    document.getElementById('hexOut').innerText = hexArr.join(' ');
+    document.getElementById('binOut').innerText = binArr.join(' ');
+    document.getElementById('asciiOut').innerText = asciiArr.join(' ');
+    document.getElementById('unicodeOut').innerText = unicodeArr.join(' ');
+}
+</script>
+
+
+<main class="content">
+            <h1 style="margin-top: 40px;"><b>BMI Calculator</b></h1>
+			<p><i> Click on the image to enter the scratch link!</i></p>
+			<a href="https://scratch.mit.edu/projects/1438091347" target="_blank">
+    <img src="scratch.jpe" alt="interactive link" style="width:300px; height:auto; cursor:pointer;">
+</a>
+
+			
+     
+
+			
+		</main>
+
+
+
+</body>
+
+			
+		</main>
+    </div>
+
+    <footer>
+        <p>&copy; Powered by UB</p>
+    </footer>
+
+</body>
+</html>
